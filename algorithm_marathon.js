@@ -117,10 +117,10 @@
 //      let arr3 = []
 //     for(let i = 0; i<arr1.length; i++){
 //         arr3[i] = [];
-//         for(let j = 0; j<arr1[i].length; j++){
-//             arr3[i][j] = null
-//             sum = (arr1[i][j] + arr2[i][j])
-//             arr3[i][j] = sum
+//         for(let k = 0; k<arr1[i].length; k++){
+//             arr3[i][k] = null
+//             sum = (arr1[i][k] + arr2[i][k])
+//             arr3[i][k] = sum
 //         }
 //     }
 //     return arr3
@@ -754,39 +754,39 @@ console.log(solution("2three45sixseven"), typeof(solution("2three45sixseven")))
 
 //--------------------------------------------------39번.  시저암호 완료
 
-let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-let idx1st = 0; 
-let result = ""
-let newstr =""
-function solution(str, n) {
-    let strsp = str.split("")  
-    for(let i = 0; i<strsp.length; i++){  
-        if(strsp[i]===" "){
-            strsp[i] = " "
-            // continue
-        }else{
-            if(alpha.indexOf(strsp[i].toLowerCase())+n >=26){
-                idx1st = alpha.indexOf(strsp[i].toLowerCase())+n-26
-                    if(strsp[i].toUpperCase()<strsp[i]){
-                        strsp[i] = alpha[idx1st]
-                    }else{
-                        newstr = alpha[idx1st]
-                        strsp[i] = newstr.toUpperCase()
-                    }
-            } else{
-                idx1st = alpha.indexOf(strsp[i].toLowerCase())+n
-                    if(strsp[i].toUpperCase()<strsp[i]){
-                        strsp[i] = alpha[idx1st]
-                    }else{
-                        newstr = alpha[idx1st]
-                        strsp[i] = newstr.toUpperCase()
-                    }
-                }           
-            }
-        }
-    result = strsp.join("")
-    return result
-}
+// let alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+// let idx1st = 0; 
+// let result = ""
+// let newstr =""
+// function solution(str, n) {
+//     let strsp = str.split("")  
+//     for(let i = 0; i<strsp.length; i++){  
+//         if(strsp[i]===" "){
+//             strsp[i] = " "
+//             // continue
+//         }else{
+//             if(alpha.indexOf(strsp[i].toLowerCase())+n >=26){
+//                 idx1st = alpha.indexOf(strsp[i].toLowerCase())+n-26
+//                     if(strsp[i].toUpperCase()<strsp[i]){
+//                         strsp[i] = alpha[idx1st]
+//                     }else{
+//                         newstr = alpha[idx1st]
+//                         strsp[i] = newstr.toUpperCase()
+//                     }
+//             } else{
+//                 idx1st = alpha.indexOf(strsp[i].toLowerCase())+n
+//                     if(strsp[i].toUpperCase()<strsp[i]){
+//                         strsp[i] = alpha[idx1st]
+//                     }else{
+//                         newstr = alpha[idx1st]
+//                         strsp[i] = newstr.toUpperCase()
+//                     }
+//                 }           
+//             }
+//         }
+//     result = strsp.join("")
+//     return result
+// }
 
 
 
